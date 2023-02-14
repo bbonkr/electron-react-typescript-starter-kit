@@ -1,0 +1,50 @@
+{
+    "name": "electron-react-typescript",
+    "version": "1.0.0",
+    "description": "Electron react typescript template",
+    "main": "dist-electron/main/index.js",
+    "private": true,
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "debug": {
+        "env": {
+            "VITE_DEV_SERVER_URL": "http://127.0.0.1:5173/"
+        }
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "prerelease": "npm run build",
+        "release": "electron-builder --config ./build/electron-builder.config.json",
+        "postinstall": "electron-builder install-app-deps",
+        "postuninstall": "electron-builder install-app-deps"
+    },
+    "keywords": [],
+    "author": "<Your name>",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/react": "^18.0.28",
+        "@types/react-dom": "^18.0.10",
+        "@vitejs/plugin-react": "^3.1.0",
+        "electron": "^23.0.0",
+        "electron-builder": "^23.6.0",
+        "eslint": "^8.34.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-plugin-import": "^2.27.5",
+        "eslint-plugin-jsx-a11y": "^6.7.1",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.32.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "typescript": "^4.9.5",
+        "vite": "^4.1.1",
+        "vite-electron-plugin": "^0.7.4",
+        "vite-plugin-electron-renderer": "^0.12.1",
+        "vite-plugin-static-copy": "^0.13.0"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
+}
